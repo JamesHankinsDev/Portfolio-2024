@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   Navbar,
@@ -5,37 +7,78 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
 } from '@nextui-org/react';
+import ContactMe from './ContactMe';
 
 export default function App() {
+  const [activeTab, setActiveTab] = React.useState<string | null>(null);
   return (
-    <Navbar shouldHideOnScroll>
+    <Navbar
+      shouldHideOnScroll
+      className="bg-secondary text-primary"
+      classNames={{
+        item: [
+          'flex',
+          'relative',
+          'h-full',
+          'items-center',
+          "data-[active=true]:after:content-['']",
+          'data-[active=true]:after:absolute',
+          'data-[active=true]:after:bottom-0',
+          'data-[active=true]:after:left-0',
+          'data-[active=true]:after:right-0',
+          'data-[active=true]:after:h-[2px]',
+          'data-[active=true]:after:rounded-[2px]',
+          'data-[active=true]:after:bg-tirtiary',
+        ],
+      }}
+    >
       <NavbarBrand>
-        <p className="font-bold text-inherit">James Hankins</p>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="#"
+            onClick={() => setActiveTab('Landing')}
+          >
+            <strong>James Hankins</strong>
+          </Link>
+        </NavbarItem>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
+        <NavbarItem isActive={activeTab === 'AboutMe'}>
+          <Link
+            color="foreground"
+            href="#"
+            onClick={() => setActiveTab('AboutMe')}
+          >
             About Me
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+        <NavbarItem isActive={activeTab === 'Resume'}>
+          <Link
+            color="foreground"
+            href="#"
+            onClick={() => setActiveTab('Resume')}
+          >
             Resume
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
+        <NavbarItem isActive={activeTab === 'ProjectWork'}>
+          <Link
+            color="foreground"
+            href="#"
+            onClick={() => setActiveTab('ProjectWork')}
+          >
             Project Work
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          {/* <Button as={Link} color="primary" href="#" variant="flat">
             Get in touch
-          </Button>
+          </Button> */}
+          <ContactMe />
         </NavbarItem>
       </NavbarContent>
     </Navbar>

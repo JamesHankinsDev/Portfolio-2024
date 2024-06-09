@@ -23,7 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextUIProvider>
           <NavHeader />
-          {children}
+          <div className="h-screen flex items-center justify-center">
+            {children}
+          </div>
         </NextUIProvider>
       </body>
     </html>
