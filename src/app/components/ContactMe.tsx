@@ -22,7 +22,12 @@ export default function ContactMe() {
   return (
     <>
       <div className="flex flex-wrap gap-3">
-        <Button onPress={() => handleOpen()} color="primary" variant="flat">
+        <Button
+          onPress={() => handleOpen()}
+          // color="primary"
+          variant="flat"
+          className="bg-tirtiary text-primary opacity-95"
+        >
           Get in touch
         </Button>
       </div>

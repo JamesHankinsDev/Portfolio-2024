@@ -9,13 +9,16 @@ import {
   Link,
 } from '@nextui-org/react';
 import ContactMe from './ContactMe';
+import { usePathname } from 'next/navigation';
 
 export default function App() {
   const [activeTab, setActiveTab] = React.useState<string | null>(null);
+  const pathname = usePathname();
+  console.log({ pathname }, `${pathname}` === '/AboutMe');
   return (
     <Navbar
       shouldHideOnScroll
-      className="bg-secondary text-primary"
+      className="bg-secondary text-primary w-screen"
       classNames={{
         item: [
           'flex',
@@ -37,7 +40,7 @@ export default function App() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="#"
+            href="/"
             onClick={() => setActiveTab('Landing')}
           >
             <strong>James Hankins</strong>
@@ -45,28 +48,29 @@ export default function App() {
         </NavbarItem>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive={activeTab === 'AboutMe'}>
+        {/* <NavbarItem isActive={activeTab === 'AboutMe'}> */}
+        <NavbarItem isActive={`${pathname}` === '/AboutMe'}>
           <Link
             color="foreground"
-            href="#"
+            href="/AboutMe"
             onClick={() => setActiveTab('AboutMe')}
           >
             About Me
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={activeTab === 'Resume'}>
+        <NavbarItem isActive={`${pathname}` === '/WorkHistory'}>
           <Link
             color="foreground"
-            href="#"
+            href="/WorkHistory"
             onClick={() => setActiveTab('Resume')}
           >
             Resume
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={activeTab === 'ProjectWork'}>
+        <NavbarItem isActive={`${pathname}` === '/ProjectWork'}>
           <Link
             color="foreground"
-            href="#"
+            href="/ProjectWork"
             onClick={() => setActiveTab('ProjectWork')}
           >
             Project Work

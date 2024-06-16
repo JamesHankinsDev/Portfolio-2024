@@ -17,8 +17,35 @@
 }
 
 body {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   background: var(--primary-color);
+}
+
+.landing_page {
+  background-image: url('/LandingPageImage.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: 0;
+  h1 {
+    /* display: block; */
+    /* font-size: 8em; */
+    /* margin-top: -0.35em; */
+    /* smargin-bottom: -0.25em; */
+    /* margin-left: 0;
+    margin-right: 0;
+    font-weight: light;
+    text-decoration: underline;
+    text-decoration-color: var(--tirtiary-color);
+    text-decoration-thickness: 6px; */
+  }
+
+  h2 {
+    /* display: block;
+    font-size: 1em;
+    /* margin-top: -2em; */
+    /* font-weight: lighter; */
+  }
 }
 
 @layer utilities {

@@ -20,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="h-screen w-screen flex overflow-hidden">
         <NextUIProvider>
           <NavHeader />
-          <div className="h-screen flex items-center justify-center">
+          <div className="w-screen flex items-center justify-center h-full max-w-7xl mx-auto">
             {children}
           </div>
         </NextUIProvider>
