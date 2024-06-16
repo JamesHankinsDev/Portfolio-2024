@@ -13,19 +13,19 @@ const imagePath = '/LandingPageImage.png';
 
 export default function Home() {
   return (
-    <div className="flex w-screen justify-start items-end px-5 landing_page h-full p-6 m-0 rounded">
+    <div className="flex w-full justify-start items-end px-5 landing_page h-full p-6">
       <Card
-        className="max-w-[400px] bg-primary text-secondary opacity-85"
+        className="max-w-[400px] bg-primary text-secondary opacity-85 my-12"
         isBlurred
       >
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
-            <p className="text-md">{`Hi, I'm James!`}</p>
+            <p className="text-md underline decoration-tirtiary text-lg">{`Hi, I'm James!`}</p>
           </div>
         </CardHeader>
-        <Divider className="bg-secondary" />
+        {/* <Divider className="bg-secondary" /> */}
         <CardBody>
-          <p>{`A Boston based developer.`}</p>
+          <p className="italic">{`A Boston based developer.`}</p>
         </CardBody>
         <Divider className="bg-secondary" />
         <CardFooter>

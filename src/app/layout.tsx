@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import NavHeader from './components/NavHeader';
-
-const inter = Inter({ subsets: ['latin'] });
 
 import * as React from 'react';
 import { NextUIProvider } from '@nextui-org/react';
@@ -20,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen w-screen flex overflow-hidden">
+      <body className="h-screen w-screen max-h-full max-w-full flex">
         <NextUIProvider>
           <NavHeader />
-          <div className="w-screen flex items-center justify-center h-full max-w-7xl mx-auto">
+          <div className="w-full h-[calc(100vh-72px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary">
             {children}
           </div>
         </NextUIProvider>
