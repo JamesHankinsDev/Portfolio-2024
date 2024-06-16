@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Accordion, AccordionItem } from '@nextui-org/react';
+import { Image } from '@nextui-org/image';
 
 const copy = {
   coverBlrub: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -20,7 +21,7 @@ const copy = {
 
 export default function AboutMe(): React.ReactElement {
   const itemClasses = {
-    base: 'py-0 w-full',
+    base: 'py-0 grow',
     title: 'text-lg text-secondary',
     trigger:
       'px-2 py-0  rounded-lg h-14 flex items-center data-[hover=true]:decoration-tirtiary data-[open=true]:decoration-tirtiary data-[hover=true]:underline data-[open=true]:underline data-[hover=true]:italic data-[open=true]:font-bold',
@@ -28,12 +29,22 @@ export default function AboutMe(): React.ReactElement {
     content: 'text-small px-2 text-primary',
   };
 
+  console.log('Height is: ', window.screen.height);
+
   return (
-    <div className="flex flex-col justify-start items-start w-full h-fit py-6 about_me">
+    <div className="flex justify-start items-start w-full h-fit py-6 about_me flex-row">
+      <Image
+        isBlurred
+        src="/IMG_0314.jpeg"
+        width={0.1 * window.screen.width}
+        alt="Author, James, in a chair"
+        className="rounded about_me_image"
+      />
       <Accordion
         defaultExpandedKeys={['1']}
         itemClasses={itemClasses}
         showDivider={false}
+        className="rounded bg-primary opacity-85 about_me_accordian"
       >
         <AccordionItem
           key="1"

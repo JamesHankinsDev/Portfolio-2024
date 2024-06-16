@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex w-full justify-start items-end px-5 landing_page h-full p-6">
       <Card
-        className="max-w-[400px] bg-primary text-secondary opacity-85 my-12"
+        className="max-w-[400px] bg-primary text-secondary opacity-95"
         isBlurred
       >
         <CardHeader className="flex gap-3">

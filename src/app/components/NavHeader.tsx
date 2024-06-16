@@ -14,7 +14,6 @@ import { usePathname } from 'next/navigation';
 export default function App() {
   const [activeTab, setActiveTab] = React.useState<string | null>(null);
   const pathname = usePathname();
-  console.log({ pathname }, `${pathname}` === '/AboutMe');
   return (
     <Navbar
       shouldHideOnScroll
