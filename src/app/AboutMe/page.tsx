@@ -29,7 +29,7 @@ export default function AboutMe(): React.ReactElement {
   };
 
   return (
-    <div className="flex flex-col justify-start items-start w-full h-fit py-6">
+    <div className="flex flex-col justify-start items-start w-full h-fit py-6 about_me">
       <Accordion
         defaultExpandedKeys={['1']}
         itemClasses={itemClasses}
@@ -55,7 +55,7 @@ export default function AboutMe(): React.ReactElement {
           }
           title="Early Career..."
         >
-          <div className="bg-secondary rounded opacity-55 p-1">
+          <div className="bg-secondary rounded opacity-75 p-1">
             {copy.earlyCareer}
           </div>
         </AccordionItem>
@@ -69,7 +69,7 @@ export default function AboutMe(): React.ReactElement {
           }
           title="Software Bootcamp..."
         >
-          <div className="bg-secondary rounded opacity-55 p-1">
+          <div className="bg-secondary rounded opacity-75 p-1">
             {copy.softwareBootcamp}
           </div>
         </AccordionItem>
@@ -81,7 +81,7 @@ export default function AboutMe(): React.ReactElement {
           }
           title="The P.N.W."
         >
-          <div className="bg-secondary rounded opacity-55 p-1">
+          <div className="bg-secondary rounded opacity-75 p-1">
             {copy.thePNW}
           </div>
         </AccordionItem>
@@ -93,7 +93,7 @@ export default function AboutMe(): React.ReactElement {
           }
           title="A New Chapter..."
         >
-          <div className="bg-secondary rounded opacity-55 p-1">
+          <div className="bg-secondary rounded opacity-75 p-1">
             {copy.aNewChapter}
           </div>
         </AccordionItem>

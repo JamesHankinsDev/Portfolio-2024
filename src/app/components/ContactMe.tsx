@@ -23,7 +23,7 @@ export default function ContactMe() {
 
   const [subject, setSubject] = React.useState<string | null>(null);
   const [body, setBody] = React.useState<string | null>(null);
-  const [sentEmail, setSentEmail] = React.useState<bool>(false);
+  const [sentEmail, setSentEmail] = React.useState<boolean>(false);
 
   const onSend = () => {
     console.log('Do that send thing!');
