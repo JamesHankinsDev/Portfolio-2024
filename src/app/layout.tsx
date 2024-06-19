@@ -1,6 +1,5 @@
 'use client';
 
-// import type { Metadata } from 'next';
 import './globals.css';
 import NavHeader from './components/NavHeader';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
@@ -10,6 +9,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import LandingPage from './LandingPage';
 import AboutMe from './AboutMe';
 import Metadata from './Metadata';
+import Resume from './WorkHistory';
 
 const metadata = {
   title: 'James Hankins',
@@ -32,6 +32,7 @@ export default function RootLayout({
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/AboutMe" element={<AboutMe />} />
+                <Route path="/WorkHistory" element={<Resume />} />
               </Routes>
             </div>
           </Router>

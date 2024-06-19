@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  // Link,
 } from '@nextui-org/react';
 import { Link } from 'react-router-dom';
 import ContactMe from './ContactMe';
@@ -49,41 +48,24 @@ export default function App() {
         </NavbarItem>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {/* <NavbarItem isActive={activeTab === 'AboutMe'}> */}
         <NavbarItem isActive={`${pathname}` === '/AboutMe'}>
-          <Link
-            color="foreground"
-            // href="/AboutMe"
-            to="/AboutMe"
-            onClick={() => setActiveTab('AboutMe')}
-          >
+          <Link color="foreground" to="/AboutMe">
             About Me
           </Link>
         </NavbarItem>
         <NavbarItem isActive={`${pathname}` === '/WorkHistory'}>
-          <Link
-            color="foreground"
-            to="/WorkHistory"
-            onClick={() => setActiveTab('Resume')}
-          >
+          <Link color="foreground" to="/WorkHistory">
             Resume
           </Link>
         </NavbarItem>
         <NavbarItem isActive={`${pathname}` === '/ProjectWork'}>
-          <Link
-            color="foreground"
-            to="/ProjectWork"
-            onClick={() => setActiveTab('ProjectWork')}
-          >
+          <Link color="foreground" to="/ProjectWork">
             Project Work
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          {/* <Button as={Link} color="primary" href="#" variant="flat">
-            Get in touch
-          </Button> */}
           <ContactMe />
         </NavbarItem>
       </NavbarContent>

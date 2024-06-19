@@ -7,7 +7,7 @@ import {
   CardHeader,
   Divider,
 } from '@nextui-org/react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const imagePath = '/LandingPageImage.png';
 
@@ -28,7 +28,7 @@ export default function LandingPage() {
         </CardBody>
         <Divider className="bg-secondary" />
         <CardFooter>
-          <Link href="/AboutMe">
+          <Link color="foreground" to="/AboutMe">
             <Button className="bg-secondary text-primary opacity-100 my-2">
               <strong>{`Learn more about me >`}</strong>
             </Button>
