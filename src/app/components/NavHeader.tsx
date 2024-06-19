@@ -17,7 +17,7 @@ export default function App() {
   return (
     <Navbar
       shouldHideOnScroll
-      className="bg-secondary text-primary w-screen"
+      className="bg-secondary text-primary w-screen border-b-2 border-tirtiary"
       classNames={{
         item: [
           'flex',

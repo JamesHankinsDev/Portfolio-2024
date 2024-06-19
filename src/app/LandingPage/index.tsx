@@ -12,8 +12,27 @@ import { Link } from 'react-router-dom';
 const imagePath = '/LandingPageImage.png';
 
 export default function LandingPage() {
+  function parallax(event: MouseEvent): void {
+    const landingPage = document.getElementById('landing_page');
+    if (!landingPage) {
+      return;
+    }
+
+    const x = (window.innerWidth - event.pageX) / 135;
+    const y = (window.innerHeight - event.pageY) / 135;
+
+    console.log({ x, y });
+    // landingPage.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    landingPage.style.backgroundPositionX = `${40 - x}%`;
+    landingPage.style.backgroundPositionY = `${40 - y}%`;
+  }
+  document.addEventListener('mousemove', parallax);
+
   return (
-    <div className="flex w-full justify-start items-end px-5 landing_page h-full p-6">
+    <div
+      className="flex w-full justify-start items-end px-5 h-full p-6"
+      id="landing_page"
+    >
       <Card
         className="max-w-[400px] bg-primary text-secondary opacity-95"
         isBlurred

@@ -36,9 +36,9 @@ body {
   z-index: 1;
 }
 
-.landing_page {
+#landing_page {
   background-image: url('/LandingPageImage.png');
-  background-position: 40% 40%;
+  background-position: 40%;
   background-repeat: no-repeat;
   background-size: auto;
   margin: 0;
