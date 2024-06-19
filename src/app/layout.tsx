@@ -33,6 +33,10 @@ export default function RootLayout({
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/AboutMe" element={<AboutMe />} />
                 <Route path="/WorkHistory" element={<Resume />} />
+                <Route
+                  path="/ProjectWork"
+                  element={<h1>Projects to Come</h1>}
+                />
               </Routes>
             </div>
           </Router>

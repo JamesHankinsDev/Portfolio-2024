@@ -32,7 +32,7 @@ export default function AboutMe(): React.ReactElement {
   console.log('Height is: ', window.screen.height);
 
   return (
-    <div className="h-full w-full flex justify-center items-center">
+    <div className="h-full w-full flex justify-center items-center px-3">
       <div className="flex justify-start items-start w-full h-fit py-6 about_me flex-row">
         <Image
           isBlurred

@@ -39,7 +39,6 @@ export default function App() {
         <NavbarItem>
           <Link
             color="foreground"
-            // href="/"
             to="/"
             onClick={() => setActiveTab('Landing')}
           >
