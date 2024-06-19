@@ -24,91 +24,93 @@ export default function AboutMe(): React.ReactElement {
     base: 'py-0 grow',
     title: 'text-lg text-secondary',
     trigger:
-      'px-2 py-0  rounded-lg h-14 flex items-center data-[hover=true]:decoration-tirtiary data-[open=true]:decoration-tirtiary data-[hover=true]:underline data-[open=true]:underline data-[hover=true]:italic data-[open=true]:font-bold',
+      'px-2 py-0  rounded-lg h-14 flex items-center data-[hover=true]:italic data-[open=true]:font-bold data-[open=true]:italic data-[hover=true]:font-bold',
     indicator: 'text-medium',
-    content: 'text-small px-2 text-primary',
+    content: 'text-small px-2 text-primary border-t-1 border-zinc-100/50',
   };
 
   console.log('Height is: ', window.screen.height);
 
   return (
-    <div className="flex justify-start items-start w-full h-fit py-6 about_me flex-row">
-      <Image
-        isBlurred
-        src="/IMG_0314.jpeg"
-        width={0.1 * window.screen.width}
-        alt="Author, James, in a chair"
-        className="rounded about_me_image"
-      />
-      <Accordion
-        defaultExpandedKeys={['1']}
-        itemClasses={itemClasses}
-        showDivider={false}
-        className="rounded bg-primary opacity-85 about_me_accordian"
-      >
-        <AccordionItem
-          key="1"
-          aria-label="Accordion 1"
-          subtitle={
-            <p className="text-xs text-secondary">{`Developer, Marketer, Tinkerer`}</p>
-          }
-          title="Who is James..."
+    <div className="h-full w-full flex justify-center items-center">
+      <div className="flex justify-start items-start w-full h-fit py-6 about_me flex-row">
+        <Image
+          isBlurred
+          src="/IMG_0314.jpeg"
+          width={0.1 * window.screen.width}
+          alt="Author, James, in a chair"
+          className="rounded about_me_image"
+        />
+        <Accordion
+          defaultExpandedKeys={['1']}
+          itemClasses={itemClasses}
+          showDivider={false}
+          className="rounded bg-primary opacity-85 about_me_accordian"
         >
-          <div className="bg-secondary rounded opacity-75 p-1">
-            {copy.coverBlrub}
-          </div>
-        </AccordionItem>
-        <AccordionItem
-          key="2"
-          aria-label="Accordion 2"
-          subtitle={
-            <p className="text-xs text-secondary">{`Learning to solve business problems`}</p>
-          }
-          title="Early Career..."
-        >
-          <div className="bg-secondary rounded opacity-75 p-1">
-            {copy.earlyCareer}
-          </div>
-        </AccordionItem>
-        <AccordionItem
-          key="3"
-          aria-label="Accordion 3"
-          subtitle={
-            <p className="text-xs text-secondary">
-              {`Sorry, where does the semi-colon go again?`}
-            </p>
-          }
-          title="Software Bootcamp..."
-        >
-          <div className="bg-secondary rounded opacity-75 p-1">
-            {copy.softwareBootcamp}
-          </div>
-        </AccordionItem>
-        <AccordionItem
-          key="4"
-          aria-label="Accordion 4"
-          subtitle={
-            <p className="text-xs text-secondary">{`Goin' to see about a girl`}</p>
-          }
-          title="The P.N.W."
-        >
-          <div className="bg-secondary rounded opacity-75 p-1">
-            {copy.thePNW}
-          </div>
-        </AccordionItem>
-        <AccordionItem
-          key="5"
-          aria-label="Accordion 5"
-          subtitle={
-            <p className="text-xs text-secondary">{`I liked it, so I put a ring on it`}</p>
-          }
-          title="A New Chapter..."
-        >
-          <div className="bg-secondary rounded opacity-75 p-1">
-            {copy.aNewChapter}
-          </div>
-        </AccordionItem>
-      </Accordion>
+          <AccordionItem
+            key="1"
+            aria-label="Accordion 1"
+            subtitle={
+              <p className="text-xs text-secondary">{`Developer, Marketer, Tinkerer`}</p>
+            }
+            title="Who is James..."
+          >
+            <div className="bg-secondary rounded opacity-75 p-1">
+              {copy.coverBlrub}
+            </div>
+          </AccordionItem>
+          <AccordionItem
+            key="2"
+            aria-label="Accordion 2"
+            subtitle={
+              <p className="text-xs text-secondary">{`Learning to solve business problems`}</p>
+            }
+            title="Early Career..."
+          >
+            <div className="bg-secondary rounded opacity-75 p-1">
+              {copy.earlyCareer}
+            </div>
+          </AccordionItem>
+          <AccordionItem
+            key="3"
+            aria-label="Accordion 3"
+            subtitle={
+              <p className="text-xs text-secondary">
+                {`Sorry, where does the semi-colon go again?`}
+              </p>
+            }
+            title="Software Bootcamp..."
+          >
+            <div className="bg-secondary rounded opacity-75 p-1">
+              {copy.softwareBootcamp}
+            </div>
+          </AccordionItem>
+          <AccordionItem
+            key="4"
+            aria-label="Accordion 4"
+            subtitle={
+              <p className="text-xs text-secondary">{`Goin' to see about a girl`}</p>
+            }
+            title="The P.N.W."
+          >
+            <div className="bg-secondary rounded opacity-75 p-1">
+              {copy.thePNW}
+            </div>
+          </AccordionItem>
+          <AccordionItem
+            key="5"
+            aria-label="Accordion 5"
+            subtitle={
+              <p className="text-xs text-secondary">{`I liked it, so I put a ring on it`}</p>
+            }
+            title="A New Chapter..."
+          >
+            <div className="bg-secondary rounded opacity-75 p-1">
+              {copy.aNewChapter}
+            </div>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </div>
   );
 }
