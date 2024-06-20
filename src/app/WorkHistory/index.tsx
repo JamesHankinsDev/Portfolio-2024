@@ -8,6 +8,9 @@ import {
   Skeleton,
 } from '@nextui-org/react';
 
+import WorkHistoryModal from './../components/WorkHistoryModal';
+import ContactMe from '../components/ContactMe';
+
 export default function Resume() {
   const [isLoaded, setIsLoaded] = React.useState(true);
 
@@ -40,9 +43,11 @@ export default function Resume() {
                 <p className="text-tiny text-white/60">B.A. Communications</p>
               </div>
             </div>
-            <Button radius="full" size="sm">
-              See More
-            </Button>
+            <WorkHistoryModal
+              header={<h1>UNE</h1>}
+              CTA="Learn More"
+              body={<p>This is where I went to college</p>}
+            />
           </CardFooter>
         </Card>
         <Card isFooterBlurred className="col-span-12 sm:col-span-4 h-[300px]">
@@ -69,9 +74,11 @@ export default function Resume() {
                 <p className="text-tiny text-black/80">B.A. Communications</p>
               </div>
             </div>
-            <Button radius="full" size="sm">
-              See More
-            </Button>
+            <WorkHistoryModal
+              header={<h1>General Assembly</h1>}
+              CTA="Learn More"
+              body={<p>This is where I learned to code!</p>}
+            />
           </CardFooter>
         </Card>
         <Card
@@ -117,14 +124,11 @@ export default function Resume() {
             <div>
               <p className="text-tiny text-black/80">See and download my CV</p>
             </div>
-            <Button
-              className="text-tiny"
-              color="primary"
-              radius="full"
-              size="sm"
-            >
-              Go Now!
-            </Button>
+            <WorkHistoryModal
+              header={<h1>My Resume!</h1>}
+              CTA="Go to my Resume"
+              body={<p>Traditional Resume Link here!</p>}
+            />
           </CardFooter>
         </Card>
         <Card
@@ -153,14 +157,11 @@ export default function Resume() {
                 April, 2014 - July, 2019
               </p>
             </div>
-            <Button
-              className="text-tiny"
-              color="primary"
-              radius="full"
-              size="sm"
-            >
-              See More
-            </Button>
+            <WorkHistoryModal
+              header={<h1>EF Education First</h1>}
+              CTA="Learn More"
+              body={<p>Sales and Marketing, Baby!</p>}
+            />
           </CardFooter>
         </Card>
         <Card
@@ -188,9 +189,11 @@ export default function Resume() {
                 <p className="text-tiny text-white/60">March, 2020 - Current</p>
               </div>
             </div>
-            <Button radius="full" size="sm">
-              See More
-            </Button>
+            <WorkHistoryModal
+              header={<h1>Accenture</h1>}
+              CTA="Learn More"
+              body={<p>Where I currently work.</p>}
+            />
           </CardFooter>
         </Card>
       </div>
