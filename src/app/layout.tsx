@@ -10,6 +10,7 @@ import LandingPage from './LandingPage';
 import AboutMe from './AboutMe';
 import Metadata from './Metadata';
 import Resume from './WorkHistory';
+import Footer from './components/Footer';
 
 const metadata = {
   title: 'James Hankins',
@@ -28,7 +29,7 @@ export default function RootLayout({
         <NextUIProvider>
           <Router>
             <NavHeader />
-            <div className="w-full h-[calc(100vh-74px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary">
+            <div className="w-full h-[calc(100vh-74px-18px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary">
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/AboutMe" element={<AboutMe />} />
@@ -39,6 +40,7 @@ export default function RootLayout({
                 />
               </Routes>
             </div>
+            <Footer />
           </Router>
         </NextUIProvider>
       </body>

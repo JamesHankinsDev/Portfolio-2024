@@ -29,17 +29,15 @@ export default function AboutMe(): React.ReactElement {
     content: 'text-small px-2 text-primary border-t-1 border-zinc-100/50',
   };
 
-  console.log('Height is: ', window.screen.height);
-
   return (
     <div className="h-full w-full flex justify-center items-center px-3">
-      <div className="flex justify-start items-start w-full h-fit py-6 about_me flex-row">
+      <div className="flex justify-center items-center w-full h-full py-6 about_me flex-row">
         <Image
           isBlurred
           src="/IMG_0314.jpeg"
           width={0.1 * window.screen.width}
           alt="Author, James, in a chair"
-          className="rounded about_me_image"
+          className="rounded about_me_image h-full w-screen"
         />
         <Accordion
           defaultExpandedKeys={['1']}

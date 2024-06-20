@@ -13,7 +13,7 @@ export default function Resume() {
 
   return (
     <div className="flex justify-center items-center h-full w-full">
-      <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
+      <div className="max-w-[1200px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
         <Card isFooterBlurred className="col-span-12 sm:col-span-4 h-[300px]">
           <CardHeader className="absolute z-10 p-2 flex-col !items-start bg-white/40 rounded">
             <p className="text-tiny text-black/60 uppercase font-bold">
