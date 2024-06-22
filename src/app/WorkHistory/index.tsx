@@ -6,18 +6,8 @@ import {
   Image,
   Button,
   Skeleton,
+  Link,
 } from '@nextui-org/react';
-
-/*
-
-Update with section headers:
-
---- Education ---
-[  ] [  ] [  ]
---- Work History ---
-[      ] [   ]
-
-*/
 
 import WorkHistoryModal from './../components/WorkHistoryModal';
 import ContactMe from '../components/ContactMe';
@@ -26,20 +16,59 @@ export default function Resume() {
   const [isLoaded, setIsLoaded] = React.useState(true);
 
   return (
-    <div className="flex justify-center items-center h-full w-full">
-      <div className="max-w-[1200px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
-        <Card isFooterBlurred className="col-span-12 sm:col-span-4 h-[300px]">
+    <div className="flex flex-col justify-center items-center w-full">
+      <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
+        <h1 className="col-span-12 bg-secondary/90 text-primary p-1 rounded my-2 font-bold">
+          Resume/CV
+        </h1>
+      </div>
+      <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
+        <Card isFooterBlurred className="col-span-12 sm:col-span-4 h-[200px]">
+          <CardHeader className="absolute z-10 p-2 flex-col !items-start bg-white/40 rounded">
+            <p className="text-tiny text-black/60 uppercase font-bold">
+              Resume
+            </p>
+          </CardHeader>
+          <Image
+            isZoomed
+            removeWrapper
+            alt="Card background"
+            className="z-0 w-full h-full object-cover"
+            src="./Resume.png"
+          />
+          <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+            <div className="flex flex-grow gap-2 items-center"></div>
+            <Button
+              isExternal={true}
+              as={Link}
+              href="https://docs.google.com/document/d/e/2PACX-1vQU8lPIFlp3YyKpc3kltqJp-Ew2UvS1L2clGvhUDwAoCJRL87mop_mtPFpLHMmqmgC1Ve5KAeH3XYBL/pub"
+              color="primary"
+              variant="solid"
+              radius="full"
+              size="sm"
+            >
+              Get my CV
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+      <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
+        <h1 className="col-span-12 bg-secondary/90 text-primary p-1 rounded my-2 font-bold mt-8">
+          Education
+        </h1>
+      </div>
+      <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
+        <Card isFooterBlurred className="col-span-12 sm:col-span-7 h-[200px]">
           <CardHeader className="absolute z-10 p-2 flex-col !items-start bg-white/40 rounded">
             <p className="text-tiny text-black/60 uppercase font-bold">
               Biddeford, ME
             </p>
             <h4 className="text-black/90 font-medium text-xl">
-              The University
-              <br />
-              of New England
+              The University of New England
             </h4>
           </CardHeader>
           <Image
+            isZoomed
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
@@ -61,7 +90,7 @@ export default function Resume() {
             />
           </CardFooter>
         </Card>
-        <Card isFooterBlurred className="col-span-12 sm:col-span-4 h-[300px]">
+        <Card isFooterBlurred className="col-span-12 sm:col-span-5 h-[200px]">
           <CardHeader className="absolute z-10 p-2 flex-col !items-start bg-white/30 rounded">
             <p className="text-tiny text-black/60 uppercase font-bold">
               Boston, MA
@@ -71,6 +100,7 @@ export default function Resume() {
             </h4>
           </CardHeader>
           <Image
+            isZoomed
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
@@ -92,59 +122,16 @@ export default function Resume() {
             />
           </CardFooter>
         </Card>
+      </div>
+      <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
+        <h1 className="col-span-12 bg-secondary/90 text-primary p-1 rounded my-2 font-bold mt-8">
+          Work History
+        </h1>
+      </div>
+      <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
         <Card
           isFooterBlurred
-          className="col-span-12 sm:col-span-4 h-[300px] flex flex-col gap-3 justify-between bg-secondary/40"
-        >
-          <CardHeader className="absolute z-10 p-1 flex-col items-start bg-white/20 rounded">
-            <p className="text-tiny m-1 text-white/60 uppercase font-bold">
-              Resume / CV
-            </p>
-            <h4 className="text-white font-medium text-xl">Get my Resume</h4>
-          </CardHeader>
-          <Skeleton isLoaded={isLoaded} className="rounded-lg m-2">
-            <div className="h-32 rounded-lg bg-primary/75 border-1 border-tirtiary"></div>
-          </Skeleton>
-          <div className="space-y-3">
-            <Skeleton
-              isLoaded={isLoaded}
-              className="pb-2 px-2 w-2/3 rounded-lg"
-            >
-              <div className="h-3 w-full rounded-lg bg-primary/75 border-1 border-tirtiary"></div>
-            </Skeleton>
-            <Skeleton
-              isLoaded={isLoaded}
-              className="pb-2 px-2 w-3/5 rounded-lg"
-            >
-              <div className="h-3 w-full rounded-lg bg-primary/75 border-1 border-tirtiary"></div>
-            </Skeleton>
-            <Skeleton
-              isLoaded={isLoaded}
-              className="pb-2 px-2 w-4/5 rounded-lg"
-            >
-              <div className="h-3 w-full rounded-lg bg-primary/75 border-1 border-tirtiary"></div>
-            </Skeleton>
-            <Skeleton
-              isLoaded={isLoaded}
-              className="pb-2 px-2 w-2/5 rounded-lg"
-            >
-              <div className="h-3 w-full rounded-lg bg-primary/75 border-1 border-tirtiary"></div>
-            </Skeleton>
-          </div>
-          <CardFooter className="absolute bg-white/10 bottom-0 z-10 justify-between">
-            <div>
-              <p className="text-tiny text-black/80">See and download my CV</p>
-            </div>
-            <WorkHistoryModal
-              header={<h1>My Resume!</h1>}
-              CTA="Go to my Resume"
-              body={<p>Traditional Resume Link here!</p>}
-            />
-          </CardFooter>
-        </Card>
-        <Card
-          isFooterBlurred
-          className="w-full h-[300px] col-span-12 sm:col-span-5"
+          className="w-full h-[200px] col-span-12 sm:col-span-5"
         >
           <CardHeader className="absolute z-10 p-1 flex-col items-start bg-white/40 rounded">
             <p className="text-tiny text-black/60 uppercase font-bold">
@@ -155,6 +142,7 @@ export default function Resume() {
             </h4>
           </CardHeader>
           <Image
+            isZoomed
             removeWrapper
             alt="Card example background"
             className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
@@ -163,10 +151,6 @@ export default function Resume() {
           <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
             <div>
               <p className="text-tiny text-black/80">Marketing Technologist</p>
-              <p className="text-tiny text-black/80">Service & Sales Rep</p>
-              <p className="text-tiny text-black/80">
-                April, 2014 - July, 2019
-              </p>
             </div>
             <WorkHistoryModal
               header={<h1>EF Education First</h1>}
@@ -177,7 +161,7 @@ export default function Resume() {
         </Card>
         <Card
           isFooterBlurred
-          className="w-full h-[300px] col-span-12 sm:col-span-7"
+          className="w-full h-[200px] col-span-12 sm:col-span-7"
         >
           <CardHeader className="absolute z-10 p-1 flex-col items-start bg-white/20 rounded">
             <p className="text-tiny text-black/60 uppercase font-bold">
@@ -188,6 +172,7 @@ export default function Resume() {
             </h4>
           </CardHeader>
           <Image
+            isZoomed
             removeWrapper
             alt="Relaxing app background"
             className="z-0 w-full h-full object-cover"
@@ -197,7 +182,6 @@ export default function Resume() {
             <div className="flex flex-grow gap-2 items-center">
               <div className="flex flex-col">
                 <p className="text-tiny text-white/60">Software Engineer</p>
-                <p className="text-tiny text-white/60">March, 2020 - Current</p>
               </div>
             </div>
             <WorkHistoryModal

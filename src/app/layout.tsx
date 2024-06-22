@@ -29,7 +29,7 @@ export default function RootLayout({
         <NextUIProvider>
           <Router>
             <NavHeader />
-            <div className="w-full h-[calc(100vh-74px-18px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary">
+            <div className="w-full h-[calc(100vh-74px-18px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary overflow-y-scroll">
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/AboutMe" element={<AboutMe />} />
