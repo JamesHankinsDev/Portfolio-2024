@@ -10,6 +10,7 @@ import LandingPage from './LandingPage';
 import AboutMe from './AboutMe';
 import Metadata from './Metadata';
 import Resume from './WorkHistory';
+import ProjectWork from './ProjectWork';
 import Footer from './components/Footer';
 
 const metadata = {
@@ -29,15 +30,12 @@ export default function RootLayout({
         <NextUIProvider>
           <Router>
             <NavHeader />
-            <div className="w-full h-[calc(100vh-74px-18px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary overflow-y-scroll">
+            <div className="w-full h-[calc(100vh-74px-18px)] flex items-start justify-center  max-w-7xl mx-auto bg-primary">
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/AboutMe" element={<AboutMe />} />
                 <Route path="/WorkHistory" element={<Resume />} />
-                <Route
-                  path="/ProjectWork"
-                  element={<h1>Projects to Come</h1>}
-                />
+                <Route path="/ProjectWork" element={<ProjectWork />} />
               </Routes>
             </div>
             <Footer />

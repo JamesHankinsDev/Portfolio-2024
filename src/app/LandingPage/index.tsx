@@ -16,27 +16,29 @@ export default function LandingPage() {
 
     const getMatrixTwoVal = Math.max(x, y) * Math.min(x, y) * -0.1;
 
-    landingPage.style.transform = `matrix(${1.2 - Math.abs(x) / 9}, 
+    landingPage.style.transform = `matrix(${1 - Math.abs(x) / 9}, 
     ${Math.max(x, y) * Math.min(x, y) * -0.1}, 
     ${0.0001}, 
-    ${1.2 - Math.abs(y) / 9}, 0, 0)`;
+    ${1 - Math.abs(y) / 9}, 0, 0)`;
   }
   document.addEventListener('mousemove', parallax);
 
   return (
-    <div
-      className="flex w-full flex-col justify-center items-center px-5 h-full p-6 overflow-hidden"
-      id="landing_page"
-    >
-      <Image
-        removeWrapper
-        alt="Card background"
-        className="z-0 w-2/3 max-w-[600px] h-1/2 rounded-full object-cover border-2 border-tirtiary"
-        src="./LandingpageImage.png"
-      />
-      <Divider className="bg-tirtiary max-w-[250px] m-6" />
-      <h1 className="uppercase text-xl">{`Welcome!`}</h1>
-      <p className="italic text-md">{`I'm James, a Boston based developer.`}</p>
+    <div className="h-full w-full overflow-hidden">
+      <div
+        className="flex max-h-2/3 w-full flex-col justify-center items-center px-5 h-full p-6"
+        id="landing_page"
+      >
+        <Image
+          removeWrapper
+          alt="Card background"
+          className="z-0 w-2/3 max-w-[600px] h-1/2 rounded-full object-cover border-2 border-tirtiary"
+          src="./LandingpageImage.png"
+        />
+        <Divider className="bg-tirtiary max-w-[250px] m-6" />
+        <h1 className="uppercase text-xl">{`Welcome!`}</h1>
+        <p className="italic text-md">{`I'm James, a Boston based developer.`}</p>
+      </div>
     </div>
   );
 }
