@@ -37,10 +37,6 @@ body {
 }
 
 #landing_page {
-  background-image: url('/LandingPageImage.png');
-  background-position: 40%;
-  background-repeat: no-repeat;
-  background-size: auto;
   margin: 0;
 }
 

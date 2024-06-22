@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-} from '@nextui-org/react';
+import { Divider, Image } from '@nextui-org/react';
 import { Link } from 'react-router-dom';
 
 const imagePath = '/LandingPageImage.png';
@@ -18,42 +11,32 @@ export default function LandingPage() {
       return;
     }
 
-    const x = (window.innerWidth - event.pageX) / 135;
-    const y = (window.innerHeight - event.pageY) / 135;
+    const x = (window.innerWidth / 2 - event.pageX) / 135;
+    const y = (window.innerHeight / 2 - event.pageY) / 135;
 
-    console.log({ x, y });
-    // landingPage.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    landingPage.style.backgroundPositionX = `${40 - x}%`;
-    landingPage.style.backgroundPositionY = `${40 - y}%`;
+    const getMatrixTwoVal = Math.max(x, y) * Math.min(x, y) * -0.1;
+
+    landingPage.style.transform = `matrix(${1.2 - Math.abs(x) / 9}, 
+    ${Math.max(x, y) * Math.min(x, y) * -0.1}, 
+    ${0.0001}, 
+    ${1.2 - Math.abs(y) / 9}, 0, 0)`;
   }
   document.addEventListener('mousemove', parallax);
 
   return (
     <div
-      className="flex w-full justify-start items-end px-5 h-full p-6"
+      className="flex w-full flex-col justify-center items-center px-5 h-full p-6 overflow-hidden"
       id="landing_page"
     >
-      <Card
-        className="max-w-[400px] bg-primary text-secondary opacity-95"
-        isBlurred
-      >
-        <CardHeader className="flex gap-3">
-          <div className="flex flex-col">
-            <p className="text-md underline decoration-tirtiary text-lg">{`Hi, I'm James!`}</p>
-          </div>
-        </CardHeader>
-        <CardBody>
-          <p className="italic">{`A Boston based developer.`}</p>
-        </CardBody>
-        <Divider className="bg-secondary" />
-        <CardFooter>
-          <Link color="foreground" to="/AboutMe">
-            <Button className="bg-secondary text-primary opacity-100 my-2">
-              <strong>{`Learn more about me >`}</strong>
-            </Button>
-          </Link>
-        </CardFooter>
-      </Card>
+      <Image
+        removeWrapper
+        alt="Card background"
+        className="z-0 w-2/3 max-w-[600px] h-1/2 rounded-full object-cover border-2 border-tirtiary"
+        src="./LandingpageImage.png"
+      />
+      <Divider className="bg-tirtiary max-w-[250px] m-6" />
+      <h1 className="uppercase text-xl">{`Welcome!`}</h1>
+      <p className="italic text-md">{`I'm James, a Boston based developer.`}</p>
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Metadata title={metadata.title} description={metadata.description} />
-      <body className="h-screen w-screen max-h-full max-w-full flex">
+      <body className="h-screen w-screen max-h-full max-w-full flex overflow-hidden">
         <NextUIProvider>
           <Router>
             <NavHeader />

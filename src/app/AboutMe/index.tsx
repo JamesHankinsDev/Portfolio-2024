@@ -20,6 +20,19 @@ const copy = {
 };
 
 export default function AboutMe(): React.ReactElement {
+  function parallax(event: MouseEvent): void {
+    const aboutMeImage = document.getElementById('james_photo');
+    if (!aboutMeImage) {
+      return;
+    }
+
+    const x = (window.innerWidth / 2 - event.pageX) / 150;
+    const y = (window.innerHeight / 2 - event.pageY) / 150;
+
+    aboutMeImage.style.transform = `translate(${x * 0.5}%, ${y * 0.5}%)`;
+  }
+  document.addEventListener('mousemove', parallax);
+
   const itemClasses = {
     base: 'py-0 grow',
     title: 'text-lg text-secondary',
@@ -38,6 +51,7 @@ export default function AboutMe(): React.ReactElement {
           width={0.1 * window.screen.width}
           alt="Author, James, in a chair"
           className="rounded about_me_image h-full w-screen"
+          id="james_photo"
         />
         <Accordion
           defaultExpandedKeys={['1']}

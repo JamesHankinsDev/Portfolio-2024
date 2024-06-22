@@ -8,6 +8,17 @@ import {
   Skeleton,
 } from '@nextui-org/react';
 
+/*
+
+Update with section headers:
+
+--- Education ---
+[  ] [  ] [  ]
+--- Work History ---
+[      ] [   ]
+
+*/
+
 import WorkHistoryModal from './../components/WorkHistoryModal';
 import ContactMe from '../components/ContactMe';
 
