@@ -40,7 +40,7 @@ export default function ProjectWork() {
 
   return (
     <div className="h-full w-full flex justify-center items-center flex-col p-8">
-      <h1>Here are a few projects I've been working on</h1>
+      <h1>{`Here are a few projects I've been working on`}</h1>
       <Carousel data={DATA} />
     </div>
   );

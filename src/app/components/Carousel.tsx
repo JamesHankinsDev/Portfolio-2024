@@ -14,14 +14,18 @@ export const Carousel = ({
 }: {
   data: {
     image: string;
+    title: string;
+    link: string;
+    description: string;
+    subType: string;
   }[];
 }) => {
   const [currentImg, setCurrentImg] = useState(0);
-  const refs = useRef([]);
+  const refs = useRef<any>([]);
 
   const handleCarouselChange = (i: number) => {
-    const curEl = refs.current[i];
-    const priorEl = refs.current[currentImg];
+    const curEl: any = refs.current[i];
+    const priorEl: any = refs.current[currentImg];
 
     setCurrentImg(i);
     curEl.className = curEl.className
