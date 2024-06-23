@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import { Image } from '@nextui-org/image';
 
@@ -20,18 +20,20 @@ const copy = {
 };
 
 export default function AboutMe(): React.ReactElement {
-  function parallax(event: MouseEvent): void {
-    const aboutMeImage = document.getElementById('james_photo');
-    if (!aboutMeImage) {
-      return;
+  useEffect(() => {
+    function parallax(event: MouseEvent): void {
+      const aboutMeImage = document.getElementById('james_photo');
+      if (!aboutMeImage) {
+        return;
+      }
+
+      const x = (window.innerWidth / 2 - event.pageX) / 150;
+      const y = (window.innerHeight / 2 - event.pageY) / 150;
+
+      aboutMeImage.style.transform = `translate(${x * 0.5}%, ${y * 0.5}%)`;
     }
-
-    const x = (window.innerWidth / 2 - event.pageX) / 150;
-    const y = (window.innerHeight / 2 - event.pageY) / 150;
-
-    aboutMeImage.style.transform = `translate(${x * 0.5}%, ${y * 0.5}%)`;
-  }
-  document.addEventListener('mousemove', parallax);
+    document.addEventListener('mousemove', parallax);
+  }, []);
 
   const itemClasses = {
     base: 'py-0 grow',
@@ -48,9 +50,8 @@ export default function AboutMe(): React.ReactElement {
         <Image
           isBlurred
           src="/IMG_0314.jpeg"
-          width={0.1 * window.screen.width}
           alt="Author, James, in a chair"
-          className="rounded about_me_image h-full w-screen"
+          className="rounded about_me_image h-full w-screen w-fit"
           id="james_photo"
         />
         <Accordion

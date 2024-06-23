@@ -20,6 +20,8 @@ body {
   color: var(--secondary-color);
   background: var(--primary-color);
   font-family: var(--font-montserrat);
+  height: 100vh;
+  overflow: hidden;
 }
 
 .about_me {

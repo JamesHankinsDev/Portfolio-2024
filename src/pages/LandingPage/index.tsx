@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Divider, Image } from '@nextui-org/react';
 import { Link } from 'react-router-dom';
 
 const imagePath = '/LandingPageImage.png';
 
 export default function LandingPage() {
-  function parallax(event: MouseEvent): void {
-    const landingPage = document.getElementById('landing_page');
-    if (!landingPage) {
-      return;
+  useEffect(() => {
+    function parallax(event: MouseEvent): void {
+      const landingPage = document.getElementById('landing_page');
+      if (!landingPage) {
+        return;
+      }
+
+      const x = (window.innerWidth / 2 - event.pageX) / 135;
+      const y = (window.innerHeight / 2 - event.pageY) / 135;
+
+      const getMatrixTwoVal = Math.max(x, y) * Math.min(x, y) * -0.1;
+
+      landingPage.style.transform = `matrix(${1 - Math.abs(x) / 9}, 
+      ${Math.max(x, y) * Math.min(x, y) * -0.1}, 
+      ${0.0001}, 
+      ${1 - Math.abs(y) / 9}, 0, 0)`;
     }
-
-    const x = (window.innerWidth / 2 - event.pageX) / 135;
-    const y = (window.innerHeight / 2 - event.pageY) / 135;
-
-    const getMatrixTwoVal = Math.max(x, y) * Math.min(x, y) * -0.1;
-
-    landingPage.style.transform = `matrix(${1 - Math.abs(x) / 9}, 
-    ${Math.max(x, y) * Math.min(x, y) * -0.1}, 
-    ${0.0001}, 
-    ${1 - Math.abs(y) / 9}, 0, 0)`;
-  }
-  document.addEventListener('mousemove', parallax);
+    document.addEventListener('mousemove', parallax);
+  }, []);
 
   return (
     <div className="h-full w-full overflow-hidden">

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Carousel } from '../components/Carousel';
-import { Card, CardBody, Link, Image, Button } from '@nextui-org/react';
 
 export default function ProjectWork() {
   const DATA = [

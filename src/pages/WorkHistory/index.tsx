@@ -5,16 +5,12 @@ import {
   CardFooter,
   Image,
   Button,
-  Skeleton,
   Link,
 } from '@nextui-org/react';
 
-import WorkHistoryModal from './../components/WorkHistoryModal';
-import ContactMe from '../components/ContactMe';
+import WorkHistoryModal from '../components/WorkHistoryModal';
 
 export default function Resume() {
-  const [isLoaded, setIsLoaded] = React.useState(true);
-
   return (
     <div className="h-full w-full overflow-y-scroll">
       <div className="flex flex-col justify-center items-center w-full">
@@ -146,7 +142,7 @@ export default function Resume() {
               isZoomed
               removeWrapper
               alt="Card example background"
-              className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
+              className="z-0 w-full h-full object-cover"
               src="./Boston.jpg"
             />
             <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
