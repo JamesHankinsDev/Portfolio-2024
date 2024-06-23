@@ -7,9 +7,9 @@ import {
   Image,
   Divider,
 } from '@nextui-org/react';
-import React, { createRef, useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
-export const Carousel = ({
+export default function Carousel({
   data,
 }: {
   data: {
@@ -19,7 +19,7 @@ export const Carousel = ({
     description: string;
     subType: string;
   }[];
-}) => {
+}) {
   const [currentImg, setCurrentImg] = useState(0);
   const refs = useRef<any>([]);
 
@@ -37,7 +37,7 @@ export const Carousel = ({
     );
   };
 
-  return (
+  return data !== null && data.length > 0 ? (
     <div className="h-full w-full flex justify-center items-center">
       <div className="flex-col">
         {data.map((v, i) => {
@@ -130,5 +130,5 @@ export const Carousel = ({
         </div>
       </div>
     </div>
-  );
-};
+  ) : null;
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import NavHeader from './components/NavHeader';
+import NavHeader from '../components/NavHeader';
 
 import * as React from 'react';
 import { NextUIProvider } from '@nextui-org/react';
@@ -9,7 +9,7 @@ import AboutMe from './AboutMe';
 import Metadata from './Metadata';
 import Resume from './WorkHistory';
 import ProjectWork from './ProjectWork';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 
 const metadata = {
   title: 'James Hankins',

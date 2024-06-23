@@ -8,7 +8,7 @@ import {
   Link,
 } from '@nextui-org/react';
 
-import WorkHistoryModal from '../components/WorkHistoryModal';
+import WorkHistoryModal from '../../components/WorkHistoryModal';
 
 export default function Resume() {
   return (

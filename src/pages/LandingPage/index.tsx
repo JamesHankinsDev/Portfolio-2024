@@ -35,7 +35,7 @@ export default function LandingPage() {
           removeWrapper
           alt="Card background"
           className="z-0 w-2/3 max-w-[600px] h-1/2 rounded-full object-cover border-2 border-tirtiary"
-          src="./LandingpageImage.png"
+          src={imagePath}
         />
         <Divider className="bg-tirtiary max-w-[250px] m-6" />
         <h1 className="uppercase text-xl">{`Welcome!`}</h1>
