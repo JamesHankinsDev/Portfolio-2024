@@ -5,11 +5,12 @@ import Carousel from '../../components/Carousel';
 export default function ProjectWork() {
   const DATA = [
     {
-      title: 'Tic-Tac-Toe',
-      subType: 'Game',
-      description: 'A Front-End based game written in Vanilla JS',
-      link: 'https://github.com/JamesHankinsDev/Tic-Tac-Toe-Game',
-      image: './Tic-Tac-Toe.png',
+      title: 'T.R.I.P.S.',
+      subType: 'CRUD App',
+      description:
+        'A full stack adventure planning app written with Express, MongoDB, and React.js',
+      link: 'https://github.com/JamesHankinsDev/trips-client',
+      image: './trips.png',
     },
     {
       title: 'Groups',
@@ -28,12 +29,11 @@ export default function ProjectWork() {
       image: './ChickenPix.png',
     },
     {
-      title: 'T.R.I.P.S.',
-      subType: 'CRUD App',
-      description:
-        'A full stack adventure planning app written with Express, MongoDB, and React.js',
-      link: 'https://github.com/JamesHankinsDev/trips-client',
-      image: './trips.png',
+      title: 'Tic-Tac-Toe',
+      subType: 'Game',
+      description: 'A Front-End based game written in Vanilla JS',
+      link: 'https://github.com/JamesHankinsDev/Tic-Tac-Toe-Game',
+      image: './Tic-Tac-Toe.png',
     },
   ];
 

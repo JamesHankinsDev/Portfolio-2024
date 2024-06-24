@@ -12,7 +12,7 @@ import WorkHistoryModal from '../../components/WorkHistoryModal';
 
 export default function Resume() {
   return (
-    <div className="h-full w-full overflow-y-scroll">
+    <div className="h-full w-full overflow-y-scroll sm:overflow-hidden">
       <div className="flex flex-col justify-center items-center w-full">
         <div className="max-w-[1200px] w-full gap-2 grid grid-cols-12 grid-rows-1 px-8">
           <h1 className="col-span-12 bg-secondary/90 text-primary p-1 rounded my-2 font-bold">
@@ -81,9 +81,17 @@ export default function Resume() {
                 </div>
               </div>
               <WorkHistoryModal
-                header={<h1>UNE</h1>}
+                header={<h1>The University of New England</h1>}
                 CTA="Learn More"
-                body={<p>This is where I went to college</p>}
+                body={
+                  <>
+                    <p>
+                      I received a B.S. in Business Administration and a B.A. in
+                      Communications at the University of New England in
+                      Biddeford, ME.
+                    </p>
+                  </>
+                }
               />
             </CardFooter>
           </Card>
@@ -115,7 +123,19 @@ export default function Resume() {
               <WorkHistoryModal
                 header={<h1>General Assembly</h1>}
                 CTA="Learn More"
-                body={<p>This is where I learned to code!</p>}
+                body={
+                  <>
+                    <p>
+                      General Assembly is a 12 week intensive Software
+                      Engineering bootcamp.
+                    </p>
+                    <br />
+                    <p>
+                      This included 500+ hours of on site instruction and 4
+                      application development projects to be completed.
+                    </p>
+                  </>
+                }
               />
             </CardFooter>
           </Card>
@@ -154,7 +174,34 @@ export default function Resume() {
               <WorkHistoryModal
                 header={<h1>EF Education First</h1>}
                 CTA="Learn More"
-                body={<p>Sales and Marketing, Baby!</p>}
+                body={
+                  <>
+                    <p className="text-md">
+                      Marketing Technologist and Traveler Support
+                    </p>
+                    <p className="text-xs">{`April, '14 - July, '19`}</p>
+
+                    <ul>
+                      <li className="text-sm">
+                        - Managed $100,000+ budget in annual digital marketing
+                        spend across social and paid search channels.
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        - Hosted monthly Executive level presentations on
+                        Marketing KPIs, providing analysis and recommendations
+                        on ad spend, campaign direction, and attribution
+                        modeling.
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        - Maintained and developed landing pages and lead
+                        capture sources to drive Marketing volume in all parts
+                        of the sales funnel (lead capture to business closure).
+                      </li>
+                    </ul>
+                  </>
+                }
               />
             </CardFooter>
           </Card>
@@ -186,7 +233,42 @@ export default function Resume() {
               <WorkHistoryModal
                 header={<h1>Accenture</h1>}
                 CTA="Learn More"
-                body={<p>Where I currently work.</p>}
+                body={
+                  <>
+                    <p className="text-md">Web Development Consultant</p>
+                    <p className="text-xs">{`March '20 - Current`}</p>
+
+                    <ul>
+                      <li className="text-sm">
+                        - Lead Engineer across multiple client workstreams
+                        including net new development and maintenance/retention
+                        of legacy platforms.
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        - Facilitating regular upskilling sessions supporting
+                        team knowledge growth of proprietary technologies and
+                        frameworks.
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        {`- Contributing hundreds of code commits (and counting), deploying 1,000s of lines of code to one of the world's largest codebases, contributing to regulatory obligations, enhancement of existing features and the development of net new tools.`}
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        {`- Versatile engineering skillset enabled for enterprise quality support in new technologies - Example: Data pipeline development in Python.`}
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        {`- Supported new business as a sales engineer developing rapid Proof of Concept applications to expand account portfolio.`}
+                      </li>
+                      <br />
+                      <li className="text-sm">
+                        {`- Developed early guidance and materials for conducting technical screens and new joiner support, hiring and onboarding dozens of new engineers to support account growth.`}
+                      </li>
+                    </ul>
+                  </>
+                }
               />
             </CardFooter>
           </Card>
